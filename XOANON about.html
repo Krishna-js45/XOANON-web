@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | XOANON Innovatives</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+ 
+  <nav>
+    <ul>
+      <li><a href="XOANON.html">Home</a></li>
+      <li><a href="XOANON about.html">About Us</a></li>
+    </ul>
+  </nav>
+  
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f2027;
+      color: white;
+      line-height: 1.6;
+      padding: 2rem;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated Background Effect */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255,0,255,0.1), transparent 50%),
+                  radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 50%);
+      background-size: 400% 400%;
+      animation: pulseBG 20s ease-in-out infinite, moveBG 60s linear infinite;
+      z-index: -1;
+    }
+
+    /* Background Animation Effects */
+    @keyframes pulseBG {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+    @keyframes moveBG {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #00fff2;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #00d9ff;
+    }
+    p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      color: #f0f0f0;
+    }
+
+    /* Fade In Effect */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Social Links Styling */
+    .socials {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .social-link {
+      font-size: 1.2rem; /* Smaller icons */
+      color: #00fff2;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      margin: 0.5rem 0; /* Space between social links */
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+    }
+
+    .social-link:hover {
+      background-color: rgba(0, 255, 255, 0.2);
+      transform: scale(1.1);
+      color: #ffffff;
+    }
+
+    .social-link i {
+      transition: transform 0.3s ease;
+    }
+
+    .social-link:hover i {
+      transform: rotate(360deg);
+    }
+/* Navigation Bar Styling */
+nav {
+  background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 255, 1) 100%); /* Gradient effect */
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the links */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background color on hover */
+  color: #0f2027; /* Dark text color on hover */
+}
+
+/* Ensure the content below is not hidden under the navbar */
+body {
+  padding-top: 70px; /* Adjust according to your navbar height */
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About XOANON Innovatives</h1>
+    <p class="reveal">At XOANON Innovatives, we are reimagining the future through research-driven technology. Born from a passion to solve real-world challenges, XOANON is a modern R&D-centric startup dedicated to delivering intelligent, sustainable, and scalable innovations.</p>
+
+    <h2 class="reveal">What We Do</h2>
+    <p class="reveal">We focus on Smart Automation Systems, Software Prototyping, Mobile Solutions, and AI-powered applications that make a difference. Our flagship Bottle Insert Machine is one example of innovation for environmental impact in Indian cities.</p>
+    <p class="reveal">We don’t just build tools—we design ecosystems. From sustainable waste management to intuitive student data platforms, our work scales across industries. We prioritize user experience, data privacy, and performance in all our digital solutions.</p>
+
+    <h2 class="reveal">Our Vision</h2>
+    <p class="reveal">To lead India’s deep-tech ecosystem with innovations that are sustainable, accessible, and transformative for society. We envision a future where every innovation is grounded in meaningful research and driven by a human-first approach.</p>
+
+    <h2 class="reveal">Our Mission</h2>
+    <p class="reveal">To foster innovation through research, empower through technology, and create solutions that truly matter. Our mission is to deliver impactful, intelligent systems that can adapt to the needs of a rapidly changing world.</p>
+    <p class="reveal">We collaborate with academia, businesses, and government bodies to create tech-driven social impact. Our agile methodology ensures continuous improvement and user-focused development at every stage.</p>
+
+    <h2 class="reveal">Why XOANON?</h2>
+    <p class="reveal">Because we're not just building products—we're building experiences, backed by purpose-driven research, designed for the future. We combine creativity, scientific rigor, and technical precision to bring bold ideas to life.</p>
+    <p class="reveal">Join us as we challenge conventional limits and shape a future where innovation works for everyone—intelligently, responsibly, and powerfully.</p>
+
+    <h2 class="reveal">Contact Us</h2>
+    <p class="reveal">We would love to hear from you! Whether you're a partner, a student, or someone who believes in tech for good, XOANON welcomes collaboration and conversation.</p>
+    <p class="reveal"><strong>Email:</strong> contact@xoanoninnovatives.com</p>
+    <p class="reveal"><strong>Location:</strong> Tamil Nadu, India</p>
+  </div>
+
+  <footer>
+    <p>© 2025 XOANON Innovatives. All Rights Reserved.</p>
+  </footer>
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/raj-krishna-rnd/" target="_blank" class="social-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/raj-krishna-rnd/" target="_blank" class="social-link">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/raj-krishna-rnd/" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>

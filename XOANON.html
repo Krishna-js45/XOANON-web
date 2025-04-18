@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XOANON | Innovating the Future with AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+  <nav>
+    <ul>
+      <li><a href="XOANON about.html">About Us</a></li>
+    </ul>
+  </nav>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #011f2b, #050d20);
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ffff;
+      animation: glow 2s infinite alternate;
+    }
+    header p {
+      font-size: 1.5rem;
+      color: #00ff88;
+      margin-top: 1rem;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffff; }
+      to { text-shadow: 0 0 30px #00ff88, 0 0 20px #00ffff; }
+    }
+    section {
+      padding: 4rem 2rem;
+    }
+    .about, .solutions, .projects, .team, .contact {
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 0 20px #00ff88;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  scroll-snap-align: center;
+  flex: 0 0 300px;
+  background: rgba(31, 31, 31, 0.9);
+  border-radius: 15px;
+  padding: 2rem;
+  color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 10px;
+      background: #222;
+      color: #00ff88;
+    }
+    .btn-submit {
+      background: #00ff88;
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-submit:hover {
+      background: #00ffff;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #666;
+    }
+    .animated-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      animation: float 3s ease-in-out infinite;
+      border: 3px solid #00ffff;
+    }
+    .team-members {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #00ffff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #00ff88;
+}
+
+
+.member {
+  text-align: center;
+  color: #00ffff;
+}
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    /* Navigation Bar Styling */
+nav {
+  background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 255, 1) 100%); /* Gradient effect */
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the links */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background color on hover */
+  color: #0f2027; /* Dark text color on hover */
+}
+
+/* Ensure the content below is not hidden under the navbar */
+body {
+  padding-top: 70px; /* Adjust according to your navbar height */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Innovating the Future with XOANON</h1>
+    <p>AI | IoT | Automation | Smart Tech</p>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p> XOANON Innovatives is a next-generation research and development startup on a mission to engineer a smarter, more sustainable future. 
+      With a deep-rooted focus on cutting-edge technologies like Artificial Intelligence, the Internet of Things, and Smart Automation, 
+      we bridge the gap between today’s challenges and tomorrow’s intelligent solutions.</p>
+  </section>
+
+  <section class="solutions">
+    <h2>Our Solutions</h2>
+    <div class="card">Smart AI Assistants</div>
+    <div class="card">IoT-Based Automation Systems</div>
+    <div class="card">Real-Time Data Analytics</div>
+  </section>
+
+ <section class="projects">
+  <h2 data-aos="fade-up">Research Projects</h2>
+  <div class="carousel" data-aos="fade-left">
+    <div class="project-card">AI modals for our OWN</div>
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">XOANON Fleet AI</div>
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">XOANON IoT DevKit </div>
+  </div>
+</section>
+
+<section class="team">
+  <h2>Meet the Team</h2><br>
+  <div class="team-members">
+    <div class="member" data-aos="fade-up">
+      <img src="img/1743965953562.png" alt="Team Member" class="animated-avatar"><br>
+      <p>Rajkrishna - Founder</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/raj-krishna-rnd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Krishna-js45" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="member" data-aos="fade-up" data-aos-delay="100">
+      <img src="img/1743968135079.png" alt="Team Member" class="animated-avatar"><br>
+      <p>Mohammed Afshal - Founder</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/mohamed-afshal-k/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AFSHAL-7" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="form-group">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button class="btn-submit">Send Message</button>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Subscribe to Newsletter">
+      <button class="btn-submit">Subscribe</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 XOANON. All rights reserved.
+  </footer>
+</body>
+</html>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+  });
+</script>
